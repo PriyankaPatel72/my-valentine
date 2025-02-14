@@ -32,7 +32,7 @@ const shuffleArray = (array) => {
 export default function Page() {
   const [showMessage, setShowMessage] = useState(false);
   const [startChallenge, setStartChallenge] = useState(false);
-  const [cards, _setCards] = useState(shuffleArray([...new Set([...piyuImages, ...nandImages])]));
+  const [cards] = useState(shuffleArray([...new Set([...piyuImages, ...nandImages])]));
   const [flippedCards, setFlippedCards] = useState([]);
   const [matchedCards, setMatchedCards] = useState([]);
 
