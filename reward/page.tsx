@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}  );    </div>      </div>        <Envelope />        <h1 className="text-4xl font-bold text-red-500">YOU HAVE A MESSAGE</h1>      <div className="flex flex-col items-center mt-6">      </div>        ))}          <img key={index} src={src} alt="Heart" width={100} height={20} className="heart-image" />        {heart.map((src, index) => (      <div className="flex justify-between m4">    <div className="valentine-theme" style={{ backgroundColor: 'lightpink' }}>  return (  const heart = Array(10).fill("/images/heart-removebg-preview.png");export default function Home() {import Envelope from "./Envelope/page";

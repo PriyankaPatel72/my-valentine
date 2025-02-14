@@ -4,7 +4,6 @@ import Image from "next/image";
 export default function Home() {
   const heart = Array(10).fill("/images/heart-removebg-preview.png");
 
-
   return (
     <div className="valentine-theme" style={{ backgroundColor: 'lightpink' }}>
       <div className="flex justify-between m4">
