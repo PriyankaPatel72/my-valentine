@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-const shuffleArray = (array) => {
+const shuffleArray = (array: number[]) => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -11,18 +11,18 @@ const shuffleArray = (array) => {
 };
 
 export default function EscapeRoom() {
-  const [pieces, setPieces] = useState([]);
+  const [pieces, setPieces] = useState<number[]>([]);
 
   useEffect(() => {
     setPieces(shuffleArray([...Array(9).keys()]));
   }, []);
 
-  const handleDragStart = (e, index) => {
-    e.dataTransfer.setData("pieceIndex", index);
+  const handleDragStart = (e: React.DragEvent<HTMLDivElement>, index: number) => {
+    e.dataTransfer.setData("pieceIndex", index.toString());
   };
 
-  const handleDrop = (e, index) => {
-    const draggedPieceIndex = e.dataTransfer.getData("pieceIndex");
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>, index: number) => {
+    const draggedPieceIndex = parseInt(e.dataTransfer.getData("pieceIndex"), 10);
     const newPieces = [...pieces];
     [newPieces[index], newPieces[draggedPieceIndex]] = [newPieces[draggedPieceIndex], newPieces[index]];
     setPieces(newPieces);
