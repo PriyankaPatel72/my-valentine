@@ -1,0 +1,13 @@
+.valentine-theme {
+  background-color: lightpink;
+  color: #ff69b4;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.valentine-theme h1 {
+  color: #ff1493;
+}
+
+.valentine-theme p {
+  color: #db7093;
+}

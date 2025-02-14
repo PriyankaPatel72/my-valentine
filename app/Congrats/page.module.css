@@ -1,0 +1,48 @@
+.square-image {
+  border-radius: 0; /* Remove border-radius to make it a square */
+}
+
+.background {
+  background-color: lightpink; /* Set background color to light pink */
+  background-image: url('/images/valentine-background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  animation: pulse 2s infinite;
+}
+
+.subtitle {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+
+.image {
+  border: 5px solid red;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.heart {
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
