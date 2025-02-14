@@ -32,7 +32,7 @@ const shuffleArray = (array) => {
 export default function Page() {
   const [showMessage, setShowMessage] = useState(false);
   const [startChallenge, setStartChallenge] = useState(false);
-  const [cards, setCards] = useState(shuffleArray([...new Set([...piyuImages, ...nandImages])]));
+  const [cards, _setCards] = useState(shuffleArray([...new Set([...piyuImages, ...nandImages])]));
   const [flippedCards, setFlippedCards] = useState([]);
   const [matchedCards, setMatchedCards] = useState([]);
 
@@ -79,7 +79,7 @@ export default function Page() {
             <div className="bg-white p-6 rounded-lg shadow-lg mt-4 max-w-md text-center">
               <p className="text-2xl text-gray-800 mb-4" style={{ fontFamily: 'Comic Sans MS, Comic Sans, cursive' }}>Dear Nand,</p>
               <p className="text-lg text-gray-700 mb-4" style={{ fontFamily: 'Comic Sans MS, Comic Sans, cursive' }}>
-                Don't worry, I'm okay. You're doing such a good job! The kidnapper asked me what the next challenge should be, and since we didn't meet for 19 years, I thought this challenge could make up for lost time.
+                Don&#39;t worry, I&#39;m okay. You&#39;re doing such a good job! The kidnapper asked me what the next challenge should be, and since we didn&#39;t meet for 19 years, I thought this challenge could make up for lost time.
               </p>
               <p className="text-lg text-gray-700" style={{ fontFamily: 'Comic Sans MS, Comic Sans, cursive' }}>XOXO, Priyanka</p>
             </div>

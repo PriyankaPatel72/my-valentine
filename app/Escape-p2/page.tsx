@@ -34,13 +34,13 @@ export default function Escape2() {
       <div className="flex flex-col items-center justify-start min-h-screen">
         <h1 className="text-5xl font-extrabold text-red-600 text-center animate-bounce mt-10">Escape Room</h1>
         <div className="flex justify-center mt-6">
-          <p className="text-2xl text-center text-gray-800 animate-pulse">Let's see how much you love Priyanka?</p>
+          <p className="text-2xl text-center text-gray-800 animate-pulse">Let&#39;s see how much you love Priyanka?</p>
         </div>    
-        <p>It&apos;s a beautiful day!</p>
+        <p>It&#39;s a beautiful day!</p>
         <form className="mt-10 w-full max-w-md bg-white p-6 rounded-lg shadow-lg animate-fade-in" onSubmit={handleSubmit}>
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="question1">
-              Question 1: What is Priyanka's favorite color?
+              Question 1: What is Priyanka&#39;s favorite color?
             </label>
             <select 
               name="question1"
@@ -56,7 +56,7 @@ export default function Escape2() {
           </div>
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="question2">
-              Question 2: What is Priyanka's favorite food?
+              Question 2: What is Priyanka&#39;s favorite food?
             </label>
             <select 
               name="question2"
@@ -125,7 +125,7 @@ export default function Escape2() {
             Submit
           </button>
         </form>
-        <p>Don&apos;t forget to smile.</p>
+        <p>Don&#39;t forget to smile.</p>
         {isCorrect && (
           <div className="mt-10 p-6 bg-green-100 text-green-800 rounded-lg shadow-lg">
             <h2 className="text-3xl font-bold text-center">Congratulations!</h2>
@@ -137,7 +137,7 @@ export default function Escape2() {
             </Link>
           </div>
         )}
-        <p>Let&apos;s make the most of it.</p>
+        <p>Let&#39;s make the most of it.</p>
       </div>
     </div>
   );
