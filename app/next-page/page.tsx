@@ -20,7 +20,7 @@ const nandImages = [
   '/images/nand6.JPG', // matches with piyu6
 ];
 
-const shuffleArray = (array) => {
+const shuffleArray = (array: string[]): string[] => {
   const shuffledArray = [...array];
   for (let i = shuffledArray.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -33,10 +33,10 @@ export default function Page() {
   const [showMessage, setShowMessage] = useState(false);
   const [startChallenge, setStartChallenge] = useState(false);
   const [cards] = useState(shuffleArray([...new Set([...piyuImages, ...nandImages])]));
-  const [flippedCards, setFlippedCards] = useState([]);
-  const [matchedCards, setMatchedCards] = useState([]);
+  const [flippedCards, setFlippedCards] = useState<number[]>([]);
+  const [matchedCards, setMatchedCards] = useState<number[]>([]);
 
-  const handleCardClick = (index) => {
+  const handleCardClick = (index: number) => {
     if (flippedCards.length === 2 || flippedCards.includes(index)) return;
 
     const newFlippedCards = [...flippedCards, index];
@@ -102,6 +102,8 @@ export default function Page() {
                       alt={`Card ${index}`}
                       layout="fill"
                       objectFit="cover"
+                      quality={50}
+                      priority
                     />
                   )}
                 </div>

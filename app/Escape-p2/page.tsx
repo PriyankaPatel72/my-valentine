@@ -5,9 +5,9 @@ import Link from 'next/link';
 export default function Escape2() {
   const [isCorrect, setIsCorrect] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const form = event.target;
+    const form = event.target as HTMLFormElement;
     const answers = {
       question1: form.question1.value,
       question2: form.question2.value,
