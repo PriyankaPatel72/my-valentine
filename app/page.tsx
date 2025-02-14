@@ -1,5 +1,4 @@
 import Envelope from "./Envelope/page";
-import Image from "next/image";
 
 export default function Home() {
 
